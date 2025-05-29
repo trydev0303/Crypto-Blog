@@ -22,25 +22,7 @@ const AboutSectionOne = () => {
       <div className="container">
         <div className="border-b border-body-color/[.15] pb-16 dark:border-white/[.15] md:pb-20 lg:pb-28">
           <div className="-mx-4 flex flex-wrap items-center">
-            
-          <div className="w-full px-4 lg:w-2/5">
-              <div className="relative mx-auto aspect-[25/24] max-w-[500px] lg:ml-0">
-                <Image
-                  src="/images/about/FB102.png"
-                  alt="about-image"
-                  fill
-                  className="mx-auto max-w-full drop-shadow-three dark:hidden dark:drop-shadow-none lg:mr-0"
-                />
-                <Image
-                  src="/images/about/FB102.png"
-                  alt="about-image"
-                  fill
-                  className="mx-auto hidden max-w-full drop-shadow-three dark:block dark:drop-shadow-none lg:mr-0"
-                />
-              </div>
-            </div>
-
-            <div className="w-full px-4 lg:w-3/5">
+            <div className="w-full px-4">
               <p className="mb-12 text-base !leading-relaxed text-body-color dark:text-body-color-dark sm:text-lg md:text-xl">
                 At just 22 years old, fresh out of school, I wasted no time diving into the world of cryptocurrency—a realm full of promise and opportunity. While most people hesitated, unsure if crypto was a fleeting trend or a genuine revolution, I saw its potential and went all in. My first major move was investing in an Antminer L7, a high-performance device that mines Litecoin and Dogecoin with impressive efficiency. It wasn’t just a purchase; it was my first stake in the digital frontier.
               </p>
