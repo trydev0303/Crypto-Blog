@@ -22,6 +22,7 @@ const Hero = () => {
                 <p className="mb-12 text-base !leading-relaxed text-body-color dark:text-body-color-dark sm:text-lg md:text-xl">
                   The Bitcoin Network The main obstacle to cryptocurrency for years was that there was no way to limit the supply: there were many ideas for creating digital coins, but there was no way to guarantee that people wouldn&apos;t just duplicate them at will. Without an authority like a central bank---an institution that regulates the flow of currency---it becomes very tricky to manage the supply of any currency. Prior to Satoshi Nakamoto&apos;s (probably a fictitious) creation of the blockchain, this issue baffled developers of digital currencies for decades. The full theory of how these work is pretty complicated- --we go into more depth in our article on explaining the &quot;blockchain&quot;---but the easiest way to explain it is to picture it as a chain.
                 </p>
+                <img src="https://hitscounter.dev/api/hit?url=easy-crypto.org&label=Remote+Viewer&icon=currency-bitcoin&color=%2375b798" />
               </div>
             </div>
           </div>
