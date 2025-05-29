@@ -3,10 +3,10 @@ export default async (request, context) => {
   const url = new URL(request.url);
   
   // Only handle /blog requests
-  if (url.pathname.startsWith('/blog')) {
+  if (url.pathname.startsWith('/blogg')) {
     // Rewrite request to your Astro blog's Netlify URL
     const astroBlogUrl = new URL(
-      url.pathname.replace(/^\/blog/, '') || '/',  // Remove /blog prefix
+      url.pathname.replace(/^\/blogg/, '') || '/',  // Remove /blog prefix
       'https://euphonious-torrone-5238d5.netlify.app'       // Your Astro blog URL
     );
 
