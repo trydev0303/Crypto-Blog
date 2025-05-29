@@ -1,0 +1,9 @@
+# netlify.toml
+[[edge_functions]]
+  path = "/blogs/*"          # Apply to all /blog routes
+  function = "blog-proxy"   # Matches the filename
+
+[[redirects]]
+  from = "/blogs"
+  to = "/blogs/"
+  status = 301
