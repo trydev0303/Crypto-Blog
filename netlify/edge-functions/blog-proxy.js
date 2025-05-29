@@ -6,7 +6,7 @@ export default async (request, context) => {
   if (url.pathname.startsWith('/blogs')) {
     // Rewrite request to your Astro blog's Netlify URL
     const astroBlogUrl = new URL(
-      url.pathname.replace(/^\/blogs/, '') || '/',  // Remove /blog prefix
+      url.pathname.replace(/^\//, '') || '/',  // Remove /blog prefix
       'https://euphonious-torrone-5238d5.netlify.app'       // Your Astro blog URL
     );
 
@@ -21,11 +21,11 @@ export default async (request, context) => {
     html = html
       .replace(
         /(href|src)="\/(?!\/)/g, 
-        '$1="/'  // Rewrite root paths to /blog/
+        '$1="/blog'  // Rewrite root paths to /blog/
       )
       .replace(
         /https:\/\/euphonious-torrone-5238d5\.netlify\.app\//g, 
-        '/'      // Replace full Astro blog URLs
+        '/blog'      // Replace full Astro blog URLs
       );
 
     // Return the modified response
