@@ -3,10 +3,10 @@ export default async (request, context) => {
   const url = new URL(request.url);
   
   // Only handle /blog requests
-  if (url.pathname.startsWith('/blog')) {
+  if (url.pathname.startsWith('/blogs')) {
     // Rewrite request to your Astro blog's Netlify URL
     const astroBlogUrl = new URL(
-      url.pathname.replace(/^\/blog/, '') || '/',  // Remove /blog prefix
+      url.pathname.replace(/^\/blogs/, '') || '/',  // Remove /blog prefix
       'https://euphonious-torrone-5238d5.netlify.app'       // Your Astro blog URL
     );
 
@@ -18,15 +18,15 @@ export default async (request, context) => {
 
     // Fix asset paths (CSS/JS/Images) in the response
     let html = await response.text();
-    // html = html
-    //   .replace(
-    //     /(href|src)="\/(?!\/)/g, 
-    //     '$1="/blog'  // Rewrite root paths to /blog/
-    //   )
-    //   .replace(
-    //     /https:\/\/euphonious-torrone-5238d5\.netlify\.app\//g, 
-    //     '/blog'      // Replace full Astro blog URLs
-    //   );
+    html = html
+      .replace(
+        /(href|src)="\/(?!\/)/g, 
+        '$1="/blog'  // Rewrite root paths to /blog/
+      )
+      .replace(
+        /https:\/\/euphonious-torrone-5238d5\.netlify\.app\//g, 
+        '/blog'      // Replace full Astro blog URLs
+      );
 
     // Return the modified response
     return new Response(html, {
